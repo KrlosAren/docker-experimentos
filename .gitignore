@@ -44,9 +44,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
 jspm_packages/
-**node_modules
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -95,7 +93,8 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+/dist
+/node_modules
 
 # Gatsby files
 .cache/
@@ -144,6 +143,3 @@ dist
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node
-
-
-server/**/node_modules
