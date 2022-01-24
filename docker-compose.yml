@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  nodeserver:
+    build:
+      context: ./server
+      dockerfile: ./server/Dockerfile
+    ports:
+      - '5000:5000'
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: ./nginx/Dockerfile
+    restart: always
+
+    ports:
+      - '80:80'
+      - '443:443'
